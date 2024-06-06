@@ -86,7 +86,7 @@ services:
       service: proxy
 
   nitro:
-    image: dfcelestia/nitro-node-dev:latest
+    image: ghcr.io/celestiaorg/nitro:v2.3.3
     ports:
       - "127.0.0.1:8449:8449"
     volumes:
@@ -94,7 +94,7 @@ services:
     command: --conf.file /home/user/.arbitrum/nodeConfig.json
 
   das-server:
-    image: dfcelestia/nitro-node-dev:latest
+    image: ghcr.io/celestiaorg/nitro:v2.3.3
     entrypoint: [ "/bin/bash", "/das-server.sh" ]
     volumes:
       - "./config:/home/user/.arbitrum"
